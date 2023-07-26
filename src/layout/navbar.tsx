@@ -78,6 +78,9 @@ export default function NavbarComponents() {
                 </Link>
               );
             })}
+            <Link className={"font-semibold"} href={"/login"}>
+              Login
+            </Link>
           </div>
         ) : (
           <></>
