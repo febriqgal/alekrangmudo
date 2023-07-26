@@ -8,6 +8,7 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import LoginIcons from "./icons/Login";
 
 export default function LoginComponents({ valuee }: { valuee: number }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -15,6 +16,7 @@ export default function LoginComponents({ valuee }: { valuee: number }) {
   return (
     <>
       <Button
+        startContent={<LoginIcons className="h-6 fill-white" />}
         variant={valuee > 0 ? "bordered" : "shadow"}
         color={valuee > 0 ? "default" : "primary"}
         href={"/"}

@@ -6,6 +6,9 @@ import Layout from "@/layout";
 import { siteConfig } from "@/constant/config";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { useEffect, useState } from "react";
+import HumbergerIcon from "@/components/icons/Humberger";
+import VideoIcon from "@/components/icons/Video";
+import AddIcons from "@/components/icons/Add";
 
 export default function Home() {
   return (
@@ -23,10 +26,15 @@ export default function Home() {
               untuk Momen Tak Terlupakan
             </h1>
             <div className="flex flex-col space-y-2">
-              <Button variant="bordered" color="primary">
+              <Button
+                startContent={<AddIcons className="h-6 fill-primary" />}
+                variant="bordered"
+                color="primary"
+              >
                 Buat Undangan
               </Button>
               <Button
+                startContent={<VideoIcon className="h-6 fill-white" />}
                 variant="shadow"
                 className="bg-gradient-to-r from-primary-400 to-primary-600"
                 color="primary"
