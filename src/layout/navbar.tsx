@@ -1,4 +1,3 @@
-import LoginComponents from "@/components/Login";
 import HumbergerIcon from "@/components/icons/Humberger";
 import LoginIcons from "@/components/icons/Login";
 import { siteConfig } from "@/constant/config";
@@ -25,7 +24,7 @@ export default function NavbarComponents() {
     <nav
       className={
         value > 0
-          ? "fixed top-0 z-50 flex items-center justify-start sm:justify-between w-full px-5 sm:px-20 py-4 transition-all duration-1000 bg-gradient-to-r from-primary-300 to-primary-600"
+          ? "fixed top-0 z-50 flex items-center justify-start sm:justify-between w-full px-5 sm:px-20 py-4 transition-all duration-1000 bg-gradient-to-r from-primary-400 to-primary-600"
           : "fixed top-0 z-50 flex items-center justify-start sm:justify-between w-full px-5 sm:px-20 py-4 transition-all duration-1000"
       }
     >
@@ -40,8 +39,8 @@ export default function NavbarComponents() {
             <HumbergerIcon
               className={
                 value > 0
-                  ? "h-10  fill-primary-50  outline-primary-50"
-                  : "h-10  fill-primary-400"
+                  ? "h-10  fill-primary-50 outline-primary-50"
+                  : "h-10  fill-primary"
               }
             />
           </div>
@@ -106,7 +105,15 @@ export default function NavbarComponents() {
       >
         {navigation.map((e, i) => {
           return (
-            <Link className={"font-semibold"} key={i} href={e.href}>
+            <Link
+              className={
+                value > 0
+                  ? "font-semibold text-primary-50"
+                  : "font-semibold text-primary"
+              }
+              key={i}
+              href={e.href}
+            >
               {e.title}
             </Link>
           );
@@ -118,7 +125,7 @@ export default function NavbarComponents() {
           startContent={<LoginIcons className="h-6 fill-primary-50" />}
           variant={value > 0 ? "bordered" : "shadow"}
           color={value > 0 ? "default" : "primary"}
-          className="text-primary-50"
+          className="text-primary-50 border-primary-50"
         >
           Login
         </Button>

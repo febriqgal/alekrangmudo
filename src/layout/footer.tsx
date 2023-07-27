@@ -1,5 +1,6 @@
 import FacebookIcon from "@/components/icons/Facebook";
 import InstagramIcon from "@/components/icons/Instagram";
+import Logo from "@/components/icons/Logo";
 import TwitterIcon from "@/components/icons/Twitter";
 import Link from "next/link";
 import React from "react";
