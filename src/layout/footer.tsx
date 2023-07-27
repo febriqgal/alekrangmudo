@@ -53,10 +53,10 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
+          <h1 className="mt-6 text-sm text-center text-primary-400">
+            ©2023 - Febriqgal🔥, All Rights Reserved.
+          </h1>
         </div>
-        <h1 className="flex items-center justify-center px-5 py-[0.5px] m-auto text-center text-white rounded-t-lg bg-primary w-fit text-sm">
-          ©2023 - Febriqgal🔥, All Rights Reserved.
-        </h1>
       </footer>
     </>
   );

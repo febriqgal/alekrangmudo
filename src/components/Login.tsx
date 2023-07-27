@@ -7,12 +7,15 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
+  Input,
 } from "@nextui-org/react";
 import LoginIcons from "./icons/Login";
+import FacebookIcon from "./icons/Facebook";
+import { useRouter } from "next/router";
 
 export default function LoginComponents({ valuee }: { valuee: number }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
+  const route = useRouter();
   return (
     <>
       <Button
@@ -28,44 +31,58 @@ export default function LoginComponents({ valuee }: { valuee: number }) {
       <Modal
         isDismissable={false}
         backdrop="blur"
-        className="bg-primary-50"
+        className="max-w-sm bg-primary-50"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
       >
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
-                Modal Title
+              <ModalHeader className="flex flex-col gap-1 text-center">
+                Masuk dengan akun
               </ModalHeader>
               <ModalBody>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pulvinar risus non risus hendrerit venenatis.
-                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
-                </p>
-                <p>
-                  Magna exercitation reprehenderit magna aute tempor cupidatat
-                  consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex
-                  incididunt cillum quis. Velit duis sit officia eiusmod Lorem
-                  aliqua enim laboris do dolor eiusmod. Et mollit incididunt
-                  nisi consectetur esse laborum eiusmod pariatur proident Lorem
-                  eiusmod et. Culpa deserunt nostrud ad veniam.
-                </p>
+                <Input
+                  isClearable
+                  size="sm"
+                  className="text-primary"
+                  color="primary"
+                  type="email"
+                  variant="bordered"
+                  label="Email"
+                />
+                <Input
+                  size="sm"
+                  className="text-primary"
+                  type="password"
+                  color="primary"
+                  variant="bordered"
+                  label="Password"
+                />
+                <div className="flex flex-col mb-6 -mt-2 space-y-1">
+                  <Button
+                    onPress={() => {
+                      route.push("/lupapassword");
+                    }}
+                    color="primary"
+                    variant="light"
+                  >
+                    Lupa Password?
+                  </Button>
+                  <Button
+                    variant="bordered"
+                    color="primary"
+                    onPress={() => {
+                      route.push("/daftar");
+                    }}
+                  >
+                    Daftar
+                  </Button>
+                  <Button variant="shadow" color="primary" onPress={onClose}>
+                    Masuk
+                  </Button>
+                </div>
               </ModalBody>
-              <ModalFooter>
-                <Button color="danger" variant="light" onClick={onClose}>
-                  Close
-                </Button>
-                <Button color="primary" onPress={onClose}>
-                  Action
-                </Button>
-              </ModalFooter>
             </>
           )}
         </ModalContent>

@@ -29,7 +29,7 @@ export default function NavbarComponents() {
       }
     >
       <div className="w-full">
-        <div className="flex items-center">
+        <div className="flex items-center justify-between">
           <div
             onClick={() => {
               setOpen(!open);
@@ -39,8 +39,8 @@ export default function NavbarComponents() {
             <HumbergerIcon
               className={
                 value > 0
-                  ? "h-10 mr-2 fill-white  outline-white"
-                  : "h-10 mr-2 fill-primary-400"
+                  ? "h-10  fill-white  outline-white"
+                  : "h-10  fill-primary-400"
               }
             />
           </div>
@@ -55,6 +55,7 @@ export default function NavbarComponents() {
           >
             Alekrangmudo
           </a>
+          <LoginComponents valuee={value} />
         </div>
         {open ? (
           <div
