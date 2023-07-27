@@ -13,7 +13,13 @@ import LoginIcons from "./icons/Login";
 import FacebookIcon from "./icons/Facebook";
 import { useRouter } from "next/router";
 
-export default function LoginComponents({ valuee }: { valuee: number }) {
+export default function LoginComponents({
+  valuee,
+  className,
+}: {
+  valuee: number;
+  className: string;
+} & React.ComponentPropsWithRef<"div">) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const route = useRouter();
   return (
@@ -22,8 +28,7 @@ export default function LoginComponents({ valuee }: { valuee: number }) {
         startContent={<LoginIcons className="h-6 fill-white" />}
         variant={valuee > 0 ? "bordered" : "shadow"}
         color={valuee > 0 ? "default" : "primary"}
-        href={"/"}
-        className="text-white"
+        className={className}
         onPress={onOpen}
       >
         Login

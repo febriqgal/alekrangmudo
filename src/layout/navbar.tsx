@@ -55,7 +55,7 @@ export default function NavbarComponents() {
           >
             Alekrangmudo
           </a>
-          <LoginComponents valuee={value} />
+          <LoginComponents className="text-white sm:hidden" valuee={value} />
         </div>
         {open ? (
           <div
@@ -102,7 +102,7 @@ export default function NavbarComponents() {
             </Link>
           );
         })}
-        <LoginComponents valuee={value} />
+        <LoginComponents className="text-white" valuee={value} />
       </div>
     </nav>
   );
