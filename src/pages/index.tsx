@@ -34,7 +34,7 @@ export default function Home() {
                 Buat Undangan
               </Button>
               <Button
-                startContent={<VideoIcon className="h-6 fill-white" />}
+                startContent={<VideoIcon className="h-6 fill-primary-50" />}
                 variant="shadow"
                 className="bg-gradient-to-r from-primary-400 to-primary-600"
                 color="primary"
