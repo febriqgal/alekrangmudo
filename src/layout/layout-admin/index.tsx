@@ -9,16 +9,16 @@ import PersonIcon from "@/components/icons/Person";
 import DateIcon from "@/components/icons/Date";
 import DesignIcon from "@/components/icons/Design";
 import VideoIcon from "@/components/icons/Video";
-const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
 
+const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className="flex min-h-screen text-slate-100">
             <SideNav />
-            <div className="w-full">
+            <div className="w-full ">
                 <div className="h-[35px] text-center items-center flex justify-center m-4 rounded border-2 border-dashed border-primary bg-primary-200" >
                     <h1 className="text-xl font-bold text-primary-900">Dashboard Admin</h1>
                 </div>
-                <div className="h-[400px] m-4 min-h-screen rounded border-2 border-dashed border-primary bg-primary-200">
+                <div className="h-[400px] m-4 min-h-screen rounded border-2 border-x-2 border-dashed border-primary bg-primary-200">
                     <main className="flex items-center justify-center text-black">
                         {children}
                     </main>
@@ -29,36 +29,31 @@ const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
 };
 
 const SideNav = () => {
-
     const nav = [
         {
             title: "Tambah User",
             href: "/admin",
-            icon: <PersonIcon className="h-6 fill-white" />
+            icon: <PersonIcon className="h-5 fill-white" />
         },
         {
             title: "Tambah PArjok",
             href: "/admin/add",
-            icon: <DateIcon className="h-6 fill-white" />
+            icon: <DateIcon className="h-5 fill-white" />
         },
         {
             title: "admin",
             href: "/",
-            icon: <DesignIcon className="h-6 fill-white" />
+            icon: <DesignIcon className="h-5 fill-white" />
         },
         {
             title: "admin",
             href: "/",
-            icon: <VideoIcon className="h-6 fill-white" />
+            icon: <VideoIcon className="h-5 fill-white" />
         },
     ]
     const route = useRouter()
     return (
-        // NOTE: In prod, you'd likely set height to h-screen and fix to the viewport
-        <nav className="flex flex-col items-center max-h-full gap-2 p-4 w-fit bg-primary">
-            {/* Temp logo from https://logoipsum.com/ */}
-
-
+        <nav className="flex flex-col items-center gap-2 p-4 mt-4 mb-4 rounded-r shadow-2xl bg-primary">
             <Link href={'/'}>
                 <Logo className="h-10 mb-4 fill-white" />
             </Link>
@@ -86,7 +81,7 @@ const SideNav = () => {
                                                 exit={{ scale: 0 }}
                                             ></motion.span>
                                         )}
-                                    </AnimatePresence> : <></>}
+                                    </AnimatePresence> : null}
                             </motion.button>
                         </Link>
                     </Tooltip>

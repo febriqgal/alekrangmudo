@@ -53,46 +53,7 @@ export default function Home() {
       subtitle: "",
       icon: <EditTextIcon className="h-7 fill-primary" />
     },
-    {
-      title: '',
-      subtitle: "",
-      icon: <EditTextIcon className="h-7 fill-primary" />
-    },
-    {
-      title: '',
-      subtitle: "",
-      icon: <EditTextIcon className="h-7 fill-primary" />
-    },
-    {
-      title: '',
-      subtitle: "",
-      icon: <EditTextIcon className="h-7 fill-primary" />
-    },
-    {
-      title: '',
-      subtitle: "",
-      icon: <EditTextIcon className="h-7 fill-primary" />
-    },
-    {
-      title: '',
-      subtitle: "",
-      icon: <EditTextIcon className="h-7 fill-primary" />
-    },
-    {
-      title: '',
-      subtitle: "",
-      icon: <EditTextIcon className="h-7 fill-primary" />
-    },
-    {
-      title: '',
-      subtitle: "",
-      icon: <EditTextIcon className="h-7 fill-primary" />
-    },
-    {
-      title: '',
-      subtitle: "",
-      icon: <EditTextIcon className="h-7 fill-primary" />
-    },
+
   ]
   return (
     <Layout>
