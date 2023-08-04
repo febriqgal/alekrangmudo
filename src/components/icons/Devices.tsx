@@ -11,8 +11,8 @@ export default function DevicesIcon({
     >
       <path
         opacity="0.4"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M6 4H18C19.0766 4 19.9545 4.85059 19.9983 5.91638H14.8997C13.7951 5.91638 12.8997 6.81181 12.8997 7.91638V17H4V6C4 4.89543 4.89543 4 6 4Z"
       />
       <path d="M14 9C14 7.89543 14.8954 7 16 7H20C21.1046 7 22 7.89543 22 9V18C22 19.1046 21.1046 20 20 20H16C14.8954 20 14 19.1046 14 18V9Z" />

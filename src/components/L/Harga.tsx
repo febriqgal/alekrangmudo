@@ -1,9 +1,9 @@
 import React from "react";
 import CrossIcon from "../icons/Cross";
 import { Button } from "@nextui-org/react";
-import Link from "next/link";
+import div from "next/link";
 import ChecklistIcon from "../icons/Checklist";
-
+import Tilt from "react-parallax-tilt";
 export default function HargaComponents() {
   return (
     <div
@@ -11,8 +11,8 @@ export default function HargaComponents() {
       className="flex items-center justify-center px-5 sm:px-20  py-[64px] "
     >
       <div className="grid w-full grid-cols-1 gap-4 pt-10 sm:grid-cols-3">
-        <Link
-          href="#"
+        <div
+
           className="relative block p-4 overflow-hidden rounded-lg shadow-2xl sm:p-6 lg:p-8"
         >
           <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-primary-200 via-primary-600 to-primary-900"></span>
@@ -97,17 +97,19 @@ export default function HargaComponents() {
             </div>
           </div>
           <div>
-            <Button
-              className="w-full bg-gradient-to-r from-primary-400 to-primary-600"
-              color="primary"
-              variant="shadow"
-            >
-              Pesan
-            </Button>
+            <Tilt className="rounded-xl" glareEnable={true} glareMaxOpacity={0.2} glareColor="#fff" glarePosition="all">
+              <Button
+                className="w-full bg-gradient-to-r from-primary-400 to-primary-600"
+                color="primary"
+                variant="shadow"
+              >
+                Pesan
+              </Button>
+            </Tilt>
           </div>
-        </Link>
-        <Link
-          href="#"
+        </div>
+        <div
+
           className="relative block p-4 overflow-hidden rounded-lg shadow-2xl sm:p-6 lg:p-8"
         >
           <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-primary-200 via-primary-600 to-primary-900"></span>
@@ -192,20 +194,23 @@ export default function HargaComponents() {
             </div>
           </div>
           <div>
-            <Button
-              className="w-full bg-gradient-to-r from-primary-400 to-primary-600"
-              color="primary"
-              variant="shadow"
-            >
-              Pesan
-            </Button>
+            <Tilt className="rounded-xl" glareEnable={true} glareMaxOpacity={0.2} glareColor="#fff" glarePosition="all">
+
+              <Button
+                className="w-full bg-gradient-to-r from-primary-400 to-primary-600"
+                color="primary"
+                variant="shadow"
+              >
+                Pesan
+              </Button>
+            </Tilt>
           </div>
-        </Link>
-        <Link
-          href="#"
+        </div>
+        <div
+
           className="relative block p-4 overflow-hidden rounded-lg shadow-2xl sm:p-6 lg:p-8"
         >
-          {" "}
+
           <div className="absolute top-0 left-0 px-4 text-white bg-primary rounded-br-xl">
             Best Deals
           </div>
@@ -291,15 +296,18 @@ export default function HargaComponents() {
             </div>
           </div>
           <div>
-            <Button
-              className="w-full bg-gradient-to-r from-primary-400 to-primary-600"
-              color="primary"
-              variant="shadow"
-            >
-              Pesan
-            </Button>
+            <Tilt className="rounded-xl" glareEnable={true} glareMaxOpacity={0.2} glareColor="#fff" glarePosition="all">
+
+              <Button
+                className="w-full bg-gradient-to-r from-primary-400 to-primary-600"
+                color="primary"
+                variant="shadow"
+              >
+                Pesan
+              </Button>
+            </Tilt>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   );

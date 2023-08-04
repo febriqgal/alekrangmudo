@@ -50,7 +50,7 @@ export default function Login() {
           >
             Daftar
           </Button>
-          <Button variant="shadow" color="primary">
+          <Button onPress={() => { route.push('/admin') }} variant="shadow" color="primary">
             Masuk
           </Button>
         </div>
